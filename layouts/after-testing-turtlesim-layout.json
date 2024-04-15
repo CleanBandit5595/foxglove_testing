@@ -1,0 +1,191 @@
+{
+  "configById": {
+    "RawMessages!44j28ye": {
+      "diffEnabled": false,
+      "diffMethod": "custom",
+      "diffTopicPath": "",
+      "showFullMessageForDiff": false,
+      "topicPath": "/turtlesim1/turtle1/pose"
+    },
+    "Teleop!24ldsb3": {
+      "topic": "/turtlesim1/turtle1/cmd_vel",
+      "publishRate": 1,
+      "upButton": {
+        "field": "linear-x",
+        "value": 1
+      },
+      "downButton": {
+        "field": "linear-x",
+        "value": -1
+      },
+      "leftButton": {
+        "field": "angular-z",
+        "value": 1
+      },
+      "rightButton": {
+        "field": "angular-z",
+        "value": -1
+      }
+    },
+    "Plot!2n6a3q2": {
+      "paths": [
+        {
+          "value": "/turtlesim1/turtle1/pose.x",
+          "enabled": true,
+          "timestampMethod": "receiveTime",
+          "showLine": true
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/turtlesim1/turtle1/pose.y",
+          "enabled": true
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": false,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    },
+    "StateTransitions!3i4dk1l": {
+      "paths": [
+        {
+          "value": "/diagnostics.status[:].values[:]{key==\"brake_switch\"}.value",
+          "timestampMethod": "headerStamp"
+        }
+      ],
+      "isSynced": true
+    },
+    "DiagnosticSummary!3equ26v": {
+      "minLevel": 0,
+      "pinnedIds": [],
+      "hardwareIdFilter": "",
+      "topicToRender": "/diagnostics",
+      "sortByLevel": true
+    },
+    "DiagnosticStatusPanel!4bdyip2": {
+      "topicToRender": "/diagnostics",
+      "collapsedSections": [],
+      "selectedHardwareId": "",
+      "splitFraction": 0.49345370528837923
+    },
+    "SourceInfo!7dc2bd": {},
+    "CallService!3c8sq2w": {
+      "requestPayload": "{\n\"r\": 255, \n\"g\": 0,\n\"b\": 0,\n\"width\": 5, \n\"off\": 0\n}",
+      "layout": "horizontal",
+      "serviceName": "/turtlesim1/turtle1/set_pen"
+    },
+    "Publish!42oy5sx": {
+      "buttonText": "forward",
+      "buttonTooltip": "hi",
+      "advancedView": false,
+      "value": "{\n  \"linear\": {\n    \"x\": 1,\n    \"y\": 0,\n    \"z\": 0\n  },\n  \"angular\": {\n    \"x\": 0,\n    \"y\": 0,\n    \"z\": 0\n  }\n}",
+      "datatype": "geometry_msgs/msg/Twist",
+      "topicName": "/turtlesim1/turtle1/cmd_vel",
+      "buttonColor": "#da0e0e"
+    },
+    "Publish!1qbnuo4": {
+      "buttonText": "forward",
+      "buttonTooltip": "hi",
+      "advancedView": true,
+      "value": "{\n  \"linear\": {\n    \"x\": 1,\n    \"y\": 0,\n    \"z\": 0\n  },\n  \"angular\": {\n    \"x\": 0,\n    \"y\": 0,\n    \"z\": 0\n  }\n}",
+      "datatype": "geometry_msgs/msg/Twist",
+      "topicName": "/turtlesim1/turtle1/cmd_vel",
+      "buttonColor": "#da0e0e"
+    },
+    "GlobalVariableSliderPanel!1wcap6k": {
+      "sliderProps": {
+        "min": 0,
+        "max": 10,
+        "step": 1
+      },
+      "globalVariableName": "velocity"
+    },
+    "Tab!1xyw5ix": {
+      "activeTabIdx": 2,
+      "tabs": [
+        {
+          "title": "myshob",
+          "layout": {
+            "first": {
+              "first": "RawMessages!44j28ye",
+              "second": "Teleop!24ldsb3",
+              "direction": "row"
+            },
+            "second": "Plot!2n6a3q2",
+            "direction": "column",
+            "splitPercentage": 48.56512141280353
+          }
+        },
+        {
+          "title": "Diagnostics",
+          "layout": {
+            "first": {
+              "first": "StateTransitions!3i4dk1l",
+              "second": {
+                "first": "DiagnosticSummary!3equ26v",
+                "second": "DiagnosticStatusPanel!4bdyip2",
+                "direction": "column",
+                "splitPercentage": 27
+              },
+              "direction": "column",
+              "splitPercentage": 18
+            },
+            "second": "SourceInfo!7dc2bd",
+            "direction": "row",
+            "splitPercentage": 50
+          }
+        },
+        {
+          "title": "service window",
+          "layout": "CallService!3c8sq2w"
+        }
+      ]
+    },
+    "Tab!48ag8gf": {
+      "activeTabIdx": 2,
+      "tabs": [
+        {
+          "title": "1"
+        },
+        {
+          "title": "2"
+        },
+        {
+          "title": "3"
+        }
+      ]
+    }
+  },
+  "globalVariables": {
+    "velocity_change": 8,
+    "velocity": 6
+  },
+  "userNodes": {},
+  "playbackConfig": {
+    "speed": 0.2
+  },
+  "layout": {
+    "direction": "row",
+    "first": {
+      "first": {
+        "first": "Publish!42oy5sx",
+        "second": "Publish!1qbnuo4",
+        "direction": "column"
+      },
+      "second": "GlobalVariableSliderPanel!1wcap6k",
+      "direction": "column",
+      "splitPercentage": 51.49425287356322
+    },
+    "second": {
+      "first": "Tab!1xyw5ix",
+      "second": "Tab!48ag8gf",
+      "direction": "column",
+      "splitPercentage": 48.735632183908045
+    },
+    "splitPercentage": 26.395510503493963
+  }
+}
